@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-for tens_digit in range(10):
-    for ones_digit in range(tens_digit + 1, 10):
-        print("{:d}{:d}".format(tens_digit, ones_digit), end=", " if tens_digit < 9 or ones_digit < 9 else "\n")
+for first_num in range(0, 10):
+    for second_num in range(first_num +1, 10):
+        if first_num == 8 and second_num == 9:
+            print("{} {}".format(first_num, second_num))
+        else:
+            print("{} {}, ".format(first_num, second_num), end='')
