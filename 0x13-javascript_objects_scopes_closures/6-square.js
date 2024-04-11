@@ -1,19 +1,11 @@
 #!/usr/bin/node
-
 const BaseSquare = require('./5-square');
 
 class Square extends BaseSquare {
-  constructor (size) {
-    super(size);
-  }
-
-  charPrint (c) {
-    if (c === undefined) {
-      c = 'X';
-    }
-
+  charPrint (c = 'X') {
+    const line = c.repeat(this.width);
     for (let i = 0; i < this.height; i++) {
-      console.log(c.repeat(this.width));
+      console.log(line);
     }
   }
 }
