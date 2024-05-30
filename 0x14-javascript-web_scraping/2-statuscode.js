@@ -5,7 +5,7 @@ const request = require('request');
 const name = process.argv[2];
 
 request(name, (error, response) => {
-	if (error) console.log(error);
+  if (error) console.log(error);
 
-	console.log('code:', response.statusCode);
+  console.log('code:', response.statusCode);
 });
